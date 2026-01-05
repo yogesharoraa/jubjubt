@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=800, initial-scale=1.0" />
+  <title>{{app_name}}</title>
+</head>
+
+<body style="margin:0;padding:0;background-color:#f4f4f4;">
+  <div style="height:4rem"></div>
+
+  <table width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td align="center">
+
+        <table width="800" cellspacing="0" cellpadding="0"
+          style="background:#ffffff;font-family:Poppins,Arial,sans-serif;">
+
+          <!-- CONTENT -->
+          <tr>
+            <td align="center" style="padding:30px">
+
+              <h2 style="margin:0;color:#000;font-weight:600;">
+                Reset Your Password
+              </h2>
+
+              <p style="margin:15px 0;font-size:14px;color:#333;">
+                You requested to reset your password for <b>{{app_name}}</b>.
+                Click the button below to continue.
+              </p>
+
+              <!-- RESET BUTTON -->
+              <table cellspacing="0" cellpadding="0" style="margin:25px 0;">
+                <tr>
+                  <td align="center"
+                    style="background:#000;padding:15px 40px;border-radius:6px;">
+                    <a href="{{resetLink}}"
+                      style="color:#fff;text-decoration:none;font-size:16px;font-weight:600;">
+                      Reset Password
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="font-size:13px;color:#555;">
+                This link will expire in <b>15 minutes</b>.
+                If you didn’t request this, please ignore this email.
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td align="center" style="background:#000;padding:10px">
+              <p style="margin:0;font-size:12px;color:#fff;">
+                {{copy_right}}
+              </p>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+  <div style="height:4rem"></div>
+</body>
+</html>

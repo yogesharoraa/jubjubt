@@ -1,0 +1,71 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'use strict';
+
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.removeColumn('ads', 'media_url').catch(() => {});
+    await queryInterface.removeColumn('ads', 'position').catch(() => {});
+
+    await queryInterface.addColumn('ads', 'image_url', {
+      type: Sequelize.STRING(500),
+      allowNull: true,
+    });
+
+    await queryInterface.addColumn('ads', 'video_url', {
+      type: Sequelize.STRING(500),
+      allowNull: true,
+    });
+
+    await queryInterface.sequelize.query(`
+      UPDATE ads SET image_url = media_url WHERE type = 'image' AND media_url IS NOT NULL;
+    `);
+
+    await queryInterface.sequelize.query(`
+      UPDATE ads SET video_url = media_url WHERE type = 'video' AND media_url IS NOT NULL;
+    `);
+  },
+
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.removeColumn('ads', 'image_url');
+    await queryInterface.removeColumn('ads', 'video_url');
+    await queryInterface.addColumn('ads', 'media_url', { type: Sequelize.STRING });
+    await queryInterface.addColumn('ads', 'position', { type: Sequelize.INTEGER, defaultValue: 1 });
+  }
+};
+
