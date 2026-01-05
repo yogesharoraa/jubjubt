@@ -1,0 +1,356 @@
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* === Tailwind CSS === */
+@import "tailwindcss";
+
+/* === Custom Variant for Dark Mode === */
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+:root {
+  --color-primary: #ffffff;
+  --active-profile: #f9a8661A;
+  --primary-color-text: #f9a866;
+  --btn-color: #452B7A;
+  --gradient-color: #f9a866;
+  --color-bordercolor: #D1D5DB;
+  --color-textcolor:black;
+  --color-textcolorsecondary:black;
+  --color-bordercolortop:#F2F2F2;
+  --color-placeholdercolor:#0000004F;
+  --color-reporttextcolor:#00162e;
+  --color-paginationtextcolor: #333333;
+  --color-toggalbtcolorborder:#f9a866 ;
+  --color-Relldetailscrencolor:#3A3A3A;
+    --color-Relldetailscrencolordate:#B0B0B0;
+  --color-inputbgcolor:#00000005;
+  --color-sidebartextcolor:#5B5B5B;
+  --color-maincolor:#f9a866;
+  --color-headercolortable:#D5D5D5;
+--color-darklightbgcolor: linear-gradient(141.72deg, rgba(35, 156, 87, 0.1) -1.01%, rgba(1, 159, 200, 0.1) 103.86%);
+}
+ 
+.dark {
+  --color-primary:#101011;
+  --gradient-color: #f9a866;
+   --color-bordercolor: #1F1F1F;
+     --color-textcolor:white;
+     --color-textcolorsecondary:#6a7282;
+        --color-bordercolortop:#1F1F1F;
+        --color-placeholdercolor:#ffffffa4;
+          --color-reporttextcolor:white;
+            --color-paginationtextcolor: white;
+              --color-toggalbtcolorborder:#f9a866 ;
+                --color-Relldetailscrencolor: white;
+                    --color-Relldetailscrencolordate:white;
+                      --color-inputbgcolor:##101011;
+                        --color-sidebartextcolor: white;
+                         --color-maincolor:#f9a866;
+                          --color-headercolortable:#212020;
+
+
+}
+
+
+/* === Theme Variables === */
+@theme {
+  --color-primary:;
+--gradient-color:;
+ --color-bordercolor:;
+ --color-textcolor:;
+   --primary-color-text:;
+--color-textcolorsecondary:;  
+  --color-bordercolortop:;
+  --color-placeholdercolor:;
+  --color-reporttextcolor:;
+  --color-paginationtextcolor: ;
+  --color-toggalbtcolorborder:;
+  --color-Relldetailscrencolor:;
+    --color-Relldetailscrencolordate:;
+    --color-inputbgcolor:;
+    --color-sidebartextcolor:;
+     --color-maincolor:;
+     --color-headercolortable:;
+
+}
+
+
+
+.colorchange {
+  filter: var(--color-filter);
+  transition: filter 0.3s ease;
+}
+
+
+/* Scrollbar Hide */
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* === Base Styles === */
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Gilroy', sans-serif;
+}
+
+.font-poppins {
+  font-family: "Poppins", serif;
+}
+
+
+
+
+/* === Utility Classes === */
+.bggradient {
+  background-color:var(--gradient-color) ;
+}
+
+
+.lightlogo {
+  background-image: var(--color-darklightbgcolor);
+}
+
+
+
+
+.darkcolor {
+  background-color: #101011;
+}
+
+.active_btn_profile {
+  background-color: var(--active-profile); 
+}
+
+.text-color {
+  color: var(--primary-color-text);
+}
+
+.btn_bg_color {
+  background-color: var(--btn-color);
+  opacity: 0.45;
+}
+
+/* === Custom Radio Button === */
+.custom-radio {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #a0aec0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.custom-radio:checked {
+  border-color: #f9a866;
+}
+
+.custom-radio:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f9a866;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* === Delete Account Box === */
+.deleteac {
+  border-bottom: 1.39px solid #dbdbdb;
+  box-shadow: 0px 2.77px 13.87px 0px rgba(0, 0, 0, 0.12);
+}
+
+/* === Input Border Box === */
+.borderinputbox {
+  border: 1px dotted rgba(101, 101, 101, 0.48);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* === Invalid Border Gradient FIXED === */
+/* Note: 'border' does not accept gradients directly. Instead, use background or border-image if needed */
+.bordercolor {
+  border: 1px solid #6C47B7; /* Fallback solid color */
+ 
+  
+}
+
+/* === World Map SVG Styling === */
+.react-svg-worldmap .worldmap path {
+  stroke: #E5E7EB;
+}
+
+
+
+#grapppph{
+  background-color: red !important;
+}
+
+
+
+
+
+/* === World Map SVG Styling === */
+.react-svg-worldmap .worldmap path {
+  stroke: #E5E7EB;
+}
+
+
+.react-tel-input .form-control {
+  background-color: var(--color-primary) !important;
+  color: var(--color-textcolor) !important;
+}
+
+
+
+/* hide vertical scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+
+.borderclorinstall {
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(213deg, rgba(108, 71, 183, 0.14), rgba(52, 31, 96, 0.14)) 1;
+}
+
+
+
+.PhoneInputInput:focus-visible {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+}
+
+.form-control {
+  border: 1px solid #efefef !important;
+  border-radius: 0.5rem !important;
+  height: 47px !important;
+  width: 100% !important;
+}
+
+.selected-flag {
+  border: none !important;
+  border-right: 1px solid #cacaca !important;
+  width: 3.5rem !important;
+  padding-left: 10px !important;
+}
+
+.flag-dropdown {
+  border: none !important;
+  background: none !important;
+  border-right: 1px !important;
+}
+
+.PhoneInputCountryIcon {
+  border: none !important;
+  background: transparent !important;
+}
+
+.special-label {
+  display: none !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: transparent !important;
+}
+
+.react-tel-input .selected-flag {
+  background-color: transparent !important;
+}
+
+.react-tel-input .country-list .search {
+  border-bottom: 1px solid #ddd !important;
+}
+
+.react-tel-input .country-list .search-box {
+  width: 90% !important;
+  padding: 10px 15px !important;
+  color: #000000 !important;
+  font-weight: 500 !important;
+}
+
+.react-tel-input .country-list {
+  outline: none !important;
+  z-index: 1 !important;
+  list-style: none !important;
+  position: absolute !important;
+  padding: 0 !important;
+  margin: 10px 0 10px -1px !important;
+  box-shadow: 1px 2px 10px #00000059 !important;
+  background-color: #fff !important;
+  max-height: 224px !important;
+  overflow-y: scroll !important;
+  border-radius: 7px !important;
+  border: 1px solid #ddd !important;
+}
+
+.react-tel-input .country-list .search-box {
+  width: 90% !important;
+  padding: 10px 15px !important;
+  color: #000000 !important;
+  font-weight: 500 !important;
+  border-radius: 5px !important;
+  border: none !important;
+  outline: none !important;
+  transition: width 0.3s ease-in-out !important;
+}
+
+/* extra small */
+
+/* mobail screeen */
+/* Extra small (mobile) screens */
+@media (max-width: 400px) {
+  .react-tel-input .country-list {
+    width: 300px !important;
+  }
+}
+
+/* Small (tablet and mobile) screens */
+@media (min-width: 401px) and (max-width: 768px) {
+  .react-tel-input .country-list {
+    width: 340px !important;
+  }
+}
+
+/* Medium (tablet) screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .react-tel-input .country-list {
+    width: 370px !important;
+  }
+}
+
+/* Large (desktop) screens */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .react-tel-input .country-list {
+    width: 420px !important;
+  }
+}
+
+/* Extra large (large desktop) screens */
+@media (min-width: 1201px) {
+  .react-tel-input .country-list {
+    width: 432px !important;
+  }
+}
+
+
